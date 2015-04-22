@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Numerics", "Numerics\Numerics.csproj", "{EE1677B3-2900-4A22-B88F-6AA48B4153C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Numerics.Test", "Numerics.Test\Numerics.Test.csproj", "{446939AA-3DCF-4E48-BE99-4A2E29D0C983}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{CCCF764B-07B3-4360-94AA-A779ED81DFED}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE1677B3-2900-4A22-B88F-6AA48B4153C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE1677B3-2900-4A22-B88F-6AA48B4153C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE1677B3-2900-4A22-B88F-6AA48B4153C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE1677B3-2900-4A22-B88F-6AA48B4153C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{446939AA-3DCF-4E48-BE99-4A2E29D0C983}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{446939AA-3DCF-4E48-BE99-4A2E29D0C983}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{446939AA-3DCF-4E48-BE99-4A2E29D0C983}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{446939AA-3DCF-4E48-BE99-4A2E29D0C983}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

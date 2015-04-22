@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EE1677B3-2900-4A22-B88F-6AA48B4153C5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Orbifold.Numerics</RootNamespace>
+    <AssemblyName>Orbifold.Numerics</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;PCL</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Algebra\AlgebraExtensions.cs" />
+    <Compile Include="Conversions\AreaUnit.cs" />
+    <Compile Include="Conversions\Converter.cs" />
+    <Compile Include="Conversions\DistanceUnit.cs" />
+    <Compile Include="Conversions\EnergyUnit.cs" />
+    <Compile Include="Conversions\ForceUnit.cs" />
+    <Compile Include="Conversions\InformationUnit.cs" />
+    <Compile Include="Conversions\MagnetismUnit.cs" />
+    <Compile Include="Conversions\MassUnit.cs" />
+    <Compile Include="Conversions\MultiplierPrefix.cs" />
+    <Compile Include="Conversions\PowerUnit.cs" />
+    <Compile Include="Conversions\PressureUnit.cs" />
+    <Compile Include="Conversions\SpeedUnit.cs" />
+    <Compile Include="Conversions\TemperatureUnit.cs" />
+    <Compile Include="Conversions\TimeUnit.cs" />
+    <Compile Include="Conversions\VolumUnit.cs" />
+    <Compile Include="Data Analysis\Framework\Features\Feature.Serialization.cs" />
+    <Compile Include="Data Analysis\Framework\Metadata.Serialization.cs" />
+    <Compile Include="Data Analysis\Framework\MetadataElement.cs" />
+    <Compile Include="Data Analysis\KMeans.cs" />
+    <Compile Include="Data Generators\AddressType.cs" />
+    <Compile Include="Data Generators\CaseType.cs" />
+    <Compile Include="Data Generators\DataGenerator.cs" />
+    <Compile Include="Data Generators\DataStore.cs" />
+    <Compile Include="Data Generators\DateIntervalType.cs" />
+    <Compile Include="Data Generators\DateTimeUtil.cs" />
+    <Compile Include="Data Generators\FileExtensionType.cs" />
+    <Compile Include="Data Generators\Markov\MarkovChain.cs" />
+    <Compile Include="Data Generators\Markov\MarkovLink.cs" />
+    <Compile Include="Data Generators\Markov\MarkovNameGenerator.cs" />
+    <Compile Include="Data Generators\Markov\MarkovTextGenerator.cs" />
+    <Compile Include="Data Generators\PersonDataType.cs" />
+    <Compile Include="Data Generators\TextSamples.cs" />
+    <Compile Include="Data Structures\AVLTree.cs" />
+    <Compile Include="Data Structures\BinarySearchTreeBase.cs" />
+    <Compile Include="Data Structures\BinaryTree.cs" />
+    <Compile Include="Data Structures\Comparers\ComparisonComparer.cs" />
+    <Compile Include="Data Structures\Comparers\KeyValuePairComparer.cs" />
+    <Compile Include="Data Structures\Comparers\MupleComparer.cs" />
+    <Compile Include="Data Structures\Comparers\ReverseComparer.cs" />
+    <Compile Include="Data Structures\Enums\NodeColor.cs" />
+    <Compile Include="Data Structures\Enums\OrderType.cs" />
+    <Compile Include="Data Structures\FunctionalList.cs" />
+    <Compile Include="Data Structures\FunctionalQueue.cs" />
+    <Compile Include="Data Structures\Graph\Edge.cs" />
+    <Compile Include="Data Structures\Graph\Graph.cs" />
+    <Compile Include="Data Structures\Graph\GraphExtensions.cs" />
+    <Compile Include="Data Structures\Graph\GraphPath.cs" />
+    <Compile Include="Data Structures\Graph\IEdge.cs" />
+    <Compile Include="Data Structures\Graph\INode.cs" />
+    <Compile Include="Data Structures\Graph\Node.cs" />
+    <Compile Include="Data Structures\Graph\Twig.cs" />
+    <Compile Include="Data Structures\Heap.cs" />
+    <Compile Include="Data Structures\IPrePostVisitor.cs" />
+    <Compile Include="Data Structures\IQueue.cs" />
+    <Compile Include="Data Structures\ISearchTree.cs" />
+    <Compile Include="Data Structures\ITree.cs" />
+    <Compile Include="Data Structures\IVisitor.cs" />
+    <Compile Include="Data Structures\Muple\Muple.1.cs" />
+    <Compile Include="Data Structures\Muple\Muple.2.cs" />
+    <Compile Include="Data Structures\Muple\Muple.3.cs" />
+    <Compile Include="Data Structures\Muple\Muple.4.cs" />
+    <Compile Include="Data Structures\Muple\Muple.5.cs" />
+    <Compile Include="Data Structures\Muple\Muple.6.cs" />
+    <Compile Include="Data Structures\Muple\Muple.7.cs" />
+    <Compile Include="Data Structures\Muple\Muple.8.cs" />
+    <Compile Include="Data Structures\Muple\Muple.cs" />
+    <Compile Include="Data Structures\PriorityQueue.cs" />
+    <Compile Include="Data Structures\RedBlack Tree\RedBlackTree.cs" />
+    <Compile Include="Data Structures\RedBlack Tree\RedBlackTree.generic.cs" />
+    <Compile Include="Data Structures\RedBlack Tree\RedBlackTreeList.cs" />
+    <Compile Include="Data Structures\RedBlack Tree\RedBlackTreeNode.cs" />
+    <Compile Include="Data Structures\Visitors\ActionVisitor.cs" />
+    <Compile Include="Data Structures\Visitors\KeyTrackingVisitor.cs" />
+    <Compile Include="Data Structures\Visitors\KeyValueTrailVisitor.cs" />
+    <Compile Include="Data Structures\Visitors\MatchingVisitor.cs" />
+    <Compile Include="Data Structures\Visitors\PrePostVisitor.cs" />
+    <Compile Include="Data Structures\Visitors\TrailVisitor.cs" />
+    <Compile Include="Data Structures\Visitors\Visitor.cs" />
+    <Compile Include="Functional Extensions\Composition.cs" />
+    <Compile Include="Functional Extensions\Currying.cs" />
+    <Compile Include="Functional Extensions\FunctionalLazy.cs" />
+    <Compile Include="Functional Extensions\Memoization.cs" />
+    <Compile Include="Functional Extensions\PartialFunction.cs" />
+    <Compile Include="Functional Extensions\Range.cs" />
+    <Compile Include="Functional Extensions\Range.Generic.cs" />
+    <Compile Include="Functional Extensions\Sequence.cs" />
+    <Compile Include="Geometry\VectorExtensions.cs" />
+    <Compile Include="Interpolation\InterpolationExtensions.cs" />
+    <Compile Include="Number\Numbers.cs" />
+    <Compile Include="Parallel\ProgressReporter.cs" />
+    <Compile Include="Statistics\Distributions\Continuous\ChiDistribution.cs" />
+    <Compile Include="Statistics\Distributions\Continuous\ContinuousDistribution.cs" />
+    <Compile Include="Statistics\Distributions\Continuous\GaussianDistribution.cs" />
+    <Compile Include="Statistics\Distributions\Discrete\BinomialDistribution.cs" />
+    <Compile Include="Statistics\Distributions\Discrete\DiscreteDistributionBase.cs" />
+    <Compile Include="Statistics\Distributions\Discrete\GeometricDistribution.cs" />
+    <Compile Include="Statistics\Distributions\Discrete\PoissonDistribution.cs" />
+    <Compile Include="Statistics\HistogramExtensions.cs" />
+    <Compile Include="Statistics\Stochastic sources\DefaultSource.cs" />
+    <Compile Include="Statistics\Stochastic sources\IStochastic.cs" />
+    <Compile Include="Statistics\Stochastic sources\MersenneSource.cs" />
+    <Compile Include="PortableAdditions\Angle.cs" />
+    <Compile Include="PortableAdditions\Matrix.cs" />
+    <Compile Include="PortableAdditions\MatrixUtil.cs" />
+    <Compile Include="PortableAdditions\Point.cs" />
+    <Compile Include="PortableAdditions\Rect.cs" />
+    <Compile Include="PortableAdditions\Size.cs" />
+    <Compile Include="PortableAdditions\TokenizerHelper.cs" />
+    <Compile Include="PortableAdditions\Utils.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Engineering\EngineeringFunctions.cs" />
+    <Compile Include="Finance\Enums\AccrIntCalcMethod.cs" />
+    <Compile Include="Finance\Enums\DayCountBasis.cs" />
+    <Compile Include="Finance\Enums\DueDate.cs" />
+    <Compile Include="Finance\Enums\Frequency.cs" />
+    <Compile Include="Finance\Enums\NumDenumPosition.cs" />
+    <Compile Include="Finance\Enums\PaymentDue.cs" />
+    <Compile Include="Finance\Enums\VdbSwitch.cs" />
+    <Compile Include="Finance\FinancialFunctions.Calc.cs" />
+    <Compile Include="Finance\FinancialFunctions.cs" />
+    <Compile Include="FFT\FastFourierTransform.cs" />
+    <Compile Include="Data Generators\Concept.cs" />
+    <Compile Include="Metrics\IDistance.cs" />
+    <Compile Include="ICloneable.cs" />
+    <Compile Include="Information\Impurity.cs" />
+    <Compile Include="Information\ClassificationImpurity.cs" />
+    <Compile Include="Information\GiniImpurity.cs" />
+    <Compile Include="Information\ShannonImpurity.cs" />
+    <Compile Include="Data Analysis\Framework\Metadata.cs" />
+    <Compile Include="Data Analysis\Framework\Conversions.cs" />
+    <Compile Include="Data Analysis\Framework\TypeHelpers.cs" />
+    <Compile Include="Data Analysis\Framework\Learner.cs" />
+    <Compile Include="Data Analysis\Framework\LearningModel.cs" />
+    <Compile Include="Data Analysis\Framework\Interfaces\IMachineLearningModel.cs" />
+    <Compile Include="Data Analysis\Framework\Interfaces\IMachineLearningModelCreator.cs" />
+    <Compile Include="Data Analysis\Supervised\DecisionTree\DecisionTreeMachineLearningModelCreator.cs" />
+    <Compile Include="Data Analysis\Supervised\DecisionTree\DecisionTreeMachineLearningModel.cs" />
+    <Compile Include="Data Analysis\Supervised\MachineLearningModel.cs" />
+    <Compile Include="Data Analysis\Supervised\MachineLearningModelCreator.cs" />
+    <Compile Include="Data Analysis\Supervised\DecisionTree\DecisionTreeNode.cs" />
+    <Compile Include="Data Analysis\Supervised\DecisionTree\DecisionTreeLink.cs" />
+    <Compile Include="Data Analysis\Supervised\Xml.cs" />
+    <Compile Include="Data Analysis\Framework\MachineLearningBaseAttributes.cs" />
+    <Compile Include="Data Analysis\Supervised\KNN\KnnMachineLearningModelCreator.cs" />
+    <Compile Include="Data Analysis\Supervised\KNN\KnnMachineLearningModel.cs" />
+    <Compile Include="Data Analysis\Supervised\NaiveBayes\Measure.cs" />
+    <Compile Include="Data Analysis\Supervised\NaiveBayes\NaiveBayesMachineLearningModelCreator.cs" />
+    <Compile Include="Data Analysis\Supervised\NaiveBayes\NaiveBayesMachineLearningModel.cs" />
+    <Compile Include="Data Analysis\Supervised\NaiveBayes\Statistic.cs" />
+    <Compile Include="Algebra\MatrixExtensions.cs" />
+    <Compile Include="PortableAdditions\Vector2D.cs" />
+    <Compile Include="Geometry\PointExtensions.cs" />
+    <Compile Include="Geometry\RectExtensions.cs" />
+    <Compile Include="Geometry\Trigonometry.cs" />
+    <Compile Include="Geometry\DistanceExstensions.cs" />
+    <Compile Include="Geometry\GeometryIntersections.cs" />
+    <Compile Include="Analysis\EpsilonExtensions.cs" />
+    <Compile Include="Analysis\ComplexExtensions.cs" />
+    <Compile Include="Analysis\Constants.cs" />
+    <Compile Include="Analysis\Functions.cs" />
+    <Compile Include="Algebra\RMatrix.cs" />
+    <Compile Include="Statistics\Stochastic sources\StochasticBase.cs" />
+    <Compile Include="Text\StringExtensions.cs" />
+    <Compile Include="Data Analysis\Supervised\NeuralNetwork\Edge.cs" />
+    <Compile Include="Data Analysis\Supervised\NeuralNetwork\Network.cs" />
+    <Compile Include="Data Analysis\Supervised\NeuralNetwork\NeuralNetworkMachineLearningModelCreator.cs" />
+    <Compile Include="Data Analysis\Supervised\NeuralNetwork\NeuralNetworkMachineLearningModel.cs" />
+    <Compile Include="Data Analysis\Supervised\NeuralNetwork\Neuron.cs" />
+    <Compile Include="Data Analysis\Supervised\Perceptron\KernelPerceptronMachineLearningModelCreator.cs" />
+    <Compile Include="Data Analysis\Supervised\Perceptron\KernelPerceptronMachineLearningModel.cs" />
+    <Compile Include="Data Analysis\Supervised\Perceptron\PerceptronMachineLearningModelCreator.cs" />
+    <Compile Include="Data Analysis\Supervised\Perceptron\PerceptronMachineLearningModel.cs" />
+    <Compile Include="Functional Extensions\FunctionalExtensions.cs" />
+    <Compile Include="Data Analysis\Unsupervised\Cluster.cs" />
+    <Compile Include="Data Analysis\Unsupervised\GMM.cs" />
+    <Compile Include="Data Analysis\Unsupervised\HClusterModel.cs" />
+    <Compile Include="Data Analysis\Unsupervised\KMeans.cs" />
+    <Compile Include="Data Analysis\Unsupervised\PCA.cs" />
+    <Compile Include="Data Analysis\Linkers\AverageLinker.cs" />
+    <Compile Include="Data Analysis\Linkers\CentroidLinker.cs" />
+    <Compile Include="Data Analysis\Linkers\CompleteLinker.cs" />
+    <Compile Include="Data Analysis\Linkers\ILinker.cs" />
+    <Compile Include="Data Analysis\Linkers\SingleLinker.cs" />
+    <Compile Include="Algebra\EigenCalculator.cs" />
+    <Compile Include="Algebra\Vector.cs" />
+    <Compile Include="Statistics\Stochastic sources\MWCSource.cs" />
+    <Compile Include="Data Analysis\Framework\Reflection.cs" />
+    <Compile Include="Data Analysis\Framework\Features\Feature.cs" />
+    <Compile Include="Data Analysis\Framework\Features\EnumerableFeature.cs" />
+    <Compile Include="Data Analysis\Framework\Features\StringFeature.cs" />
+    <Compile Include="Data Analysis\Framework\DateTimeFeatureType.cs" />
+    <Compile Include="Data Analysis\Framework\Features\DateTimeFeature.cs" />
+    <Compile Include="Data Analysis\Framework\StringSplitType.cs" />
+    <Compile Include="Data Analysis\Framework\DatePortion.cs" />
+    <Compile Include="Statistics\Stochastic sources\MultiplyWithCarryRandomGenerator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data Analysis\Supervised\Regression\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup />
+</Project>
