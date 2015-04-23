@@ -196,7 +196,7 @@ FakesAssemblies/
 *.opt
 
 # my stuff
-Algebra
+
 Analysis
 Conversions
 Data Analysis
