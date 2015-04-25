@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{446939AA-3DCF-4E48-BE99-4A2E29D0C983}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Orbifold.Numerics.Test</RootNamespace>
+    <AssemblyName>Orbifold.Numerics.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Geometry\GeometryTests.cs" />
+    <Compile Include="MachineLearning\BaseSupervised.cs" />
+    <Compile Include="MachineLearning\DecisionTreeTests.cs" />
+    <Compile Include="MachineLearning\KNNTests.cs" />
+    <Compile Include="MachineLearning\NaiveBayesTests.cs" />
+    <Compile Include="Finance\FinancialFunctionsTests.cs" />
+    <Compile Include="DataStructures\GraphAnalysisTests.cs" />
+    <Compile Include="DataStructures\DataStructuresTests.cs" />
+    <Compile Include="Algebra\AlgebraTests.cs" />
+    <Compile Include="Statistics\StatisticsTests.cs" />
+    <Compile Include="Utils\House.cs" />
+    <Compile Include="Utils\Tennis.cs" />
+    <Compile Include="Utils\Iris.cs" />
+    <Compile Include="Utils\ValueObject.cs" />
+    <Compile Include="Utils\ArbitraryPrediction.cs" />
+    <Compile Include="Utils\CountingVisitor.cs" />
+    <Compile Include="Engineering\EngineeringFunctionsTests.cs" />
+    <Compile Include="MachineLearning\InformationTests.cs" />
+    <Compile Include="Utils\SumVisitor.cs" />
+    <Compile Include="Utils\TrailVisitor.cs" />
+    <Compile Include="Algebra\MatrixTests.cs" />
+    <Compile Include="Math\MathTests.cs" />
+    <Compile Include="Math\InterpolationTests.cs" />
+    <Compile Include="DataGeneration\DataGenerationTests.cs" />
+    <Compile Include="Functional\FunctionalTests.cs" />
+    <Compile Include="MachineLearning\NeuralNetworkTests.cs" />
+    <Compile Include="Utils\Student.cs" />
+    <Compile Include="MachineLearning\HierarchicalClusteringTests.cs" />
+    <Compile Include="MachineLearning\KMeansTests.cs" />
+    <Compile Include="MachineLearning\PCATests.cs" />
+    <Compile Include="Utils\Feed.cs" />
+    <Compile Include="String\StringTests.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Numerics\Numerics.csproj">
+      <Project>{EE1677B3-2900-4A22-B88F-6AA48B4153C5}</Project>
+      <Name>Numerics</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="String\" />
+  </ItemGroup>
+</Project>

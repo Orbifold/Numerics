@@ -196,26 +196,5 @@ FakesAssemblies/
 *.opt
 
 # my stuff
-
-Analysis
-Conversions
 Data Analysis
-Data Generators
-
-Engineering
-FFT
-Finance
-Functional Extensions
-Geometry
-Information
-Interpolation
-Metrics
-Number
-Parallel
-
-Statistics
-Text
 MachineLearning
-Numerics.Test
-
-	
