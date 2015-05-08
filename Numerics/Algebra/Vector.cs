@@ -246,6 +246,9 @@ namespace Orbifold.Numerics
             return new Vector(array);
         }
 
+        /// <summary>
+        /// Entry-by-entry multiplication of the given vectors.
+        /// </summary>
         public static Vector operator *(Vector one, Vector two)
         {
             if (one.Dimension != two.Dimension) throw new InvalidOperationException("Dimensions do not match!");

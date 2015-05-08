@@ -16,7 +16,7 @@ namespace Orbifold.Numerics.Tests.DataStructures
 	[TestFixture]
 	public class GraphAnalysisTests
 	{
-		private static readonly Random Rand = new Random(Environment.TickCount);
+        private static readonly System.Random Rand = new System.Random(Environment.TickCount);
 
 		/// <summary>
 		///Gets or sets the test context which provides

@@ -16,7 +16,7 @@ namespace Orbifold.Numerics
 
 		private readonly int order;
 
-		private readonly Random rnd = new Random(Environment.TickCount);
+        private readonly System.Random rnd = new System.Random(Environment.TickCount);
 
 		private readonly List<string> samples = new List<string>();
 

@@ -17,7 +17,7 @@ namespace Orbifold.Numerics
 		/// <summary>
 		/// The randomizer.
 		/// </summary>
-		private static readonly Random Rand = new Random(Environment.TickCount);
+        private static readonly System.Random Rand = new System.Random(Environment.TickCount);
 
 		/// <summary>
 		/// Appends the given list to the current one.

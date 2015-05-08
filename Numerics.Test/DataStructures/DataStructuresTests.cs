@@ -15,7 +15,7 @@ namespace Orbifold.Numerics.Tests.DataStructures
 	[TestFixture]
 	public class DataStructuresTests
 	{
-		private static Random Rand = new Random(Environment.TickCount);
+        private static System.Random Rand = new System.Random(Environment.TickCount);
 
 		#region Additional test attributes
 

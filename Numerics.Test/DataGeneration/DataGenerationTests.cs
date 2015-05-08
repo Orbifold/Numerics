@@ -12,7 +12,7 @@ namespace Orbifold.Numerics.Tests.DataGeneration
 	[TestFixture]
 	public sealed class DataGenerationTests
 	{
-		static readonly Random rand = new Random(Environment.TickCount);
+        static readonly System.Random rand = new System.Random(Environment.TickCount);
 
 		[Test]
 		[Category("Data Generators")]

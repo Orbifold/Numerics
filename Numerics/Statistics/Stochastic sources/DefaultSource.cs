@@ -22,7 +22,7 @@ namespace Orbifold.Numerics
 		/// </summary>
 		private int bitCount;
 
-		private Random rand;
+        private System.Random rand;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="DefaultSource"/> class, using a time-dependent default 
@@ -218,7 +218,7 @@ namespace Orbifold.Numerics
 		public override sealed void Reset()
 		{
 			// Create a new Random object using the same seed.
-			this.rand = new Random(this.seed);
+            this.rand = new System.Random(this.seed);
 
 			// Reset helper variables used for generation of random bools.
 			this.bitBuffer = 0;

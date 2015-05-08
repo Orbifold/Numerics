@@ -17,7 +17,7 @@ namespace
         /// <summary>
         /// The rand.
         /// </summary>
-        private static readonly Random Rand = new Random(Environment.TickCount);
+        private static readonly System.Random Rand = new System.Random(Environment.TickCount);
 
         /// <summary>
         /// Performs a breadth-first traversal of the graph starting at the given node.

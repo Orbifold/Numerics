@@ -137,7 +137,7 @@ namespace Orbifold.Numerics
 			return markovLink;
 		}
 
-		static readonly Random rand = new Random();
+        static readonly System.Random rand = new System.Random();
 		/// <summary>
 		/// select a random follower weighted
 		/// towards followers that followed us

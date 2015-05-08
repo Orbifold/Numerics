@@ -19,7 +19,7 @@ namespace Orbifold.Numerics
 		/// <summary>
 		/// The randomizer at the basis of all.
 		/// </summary>
-		private static readonly Random Rand = new Random(Environment.TickCount);
+        private static readonly System.Random Rand = new System.Random(Environment.TickCount);
 
 		/// <summary>
 		/// Returns a random paragraph of lipsum text of the specified length.

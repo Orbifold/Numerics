@@ -297,6 +297,25 @@ namespace Orbifold.Numerics
         {
             return Vector.Dot(v, x);
         }
+        
+        /// <summary>
+        /// Returns the outer product with the given vector.
+        /// </summary>
+        /// <param name="a">A vector</param>
+        /// <param name="b">Another vector</param>
+        /// <returns></returns>
+        public static RMatrix Outer(this Vector a, Vector b)
+        {
+            var result = new RMatrix(a.Dimension, 2);
+            for (var i = 0; i < a.Dimension; i++)
+            {
+                for (var j = 0; j < b.Dimension; j++)
+                {
+                    result[i, j] = a[i] * b[j];
+                }
+            }
+            return result;
+        }
 
         /// <summary>
         /// Returns the mirrored vector with respect to the X-coordinate.

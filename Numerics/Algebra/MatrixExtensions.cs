@@ -123,6 +123,54 @@ namespace Orbifold.Numerics
 			return m[i, t].Sum();
 		}
 
+        public static Vector RowSums(this RMatrix matrix)
+        {
+            
+            var result = new double[matrix.RowCount];
+            for (var i = 0; i < matrix.RowCount; i++)
+            {
+                result[i] = matrix[i, 0] + matrix[i, 1];
+            }
+            return new Vector(result);
+        }
+        
+        public static Vector ColSums(this RMatrix matrix)
+        {
+            var result = new double[2];
+            for (var i = 0; i < matrix.RowCount; i++)
+            {
+                result[0] += matrix[i, 0];
+                result[1] += matrix[i, 1];
+            }
+          return new Vector(result);
+        }
+
+        /// <summary>
+        /// Returns the minimum value of the given one and each entry of the matrix.
+        /// </summary>
+        /// <param name="m">A real-valued matrix.</param>
+        /// <param name="v">A real value.</param>
+        public static double Min(this RMatrix m, double v)
+        {
+            var min = double.MaxValue;
+            for (var i = 0; i < m.RowCount; i++)
+                for (var j = 0; j < m.ColumnCount; j++)
+                    min = Math.Min(min, Math.Min(v, m[i, j]));
+            return min;
+        }
+
+        /// <summary>
+        /// Returns a new matrix with the entries being the absolute value of the given matrix.
+        /// </summary>
+        /// <param name="m">A real-valued matrix.</param>
+        public static RMatrix Abs(this RMatrix m)
+        {
+            var clone = new RMatrix(m.RowCount, m.ColumnCount);
+            for (var i = 0; i < m.RowCount; i++)
+                for (var j = 0; j < m.ColumnCount; j++)
+                    clone[i, j] = Math.Abs(m[i, j]);
+            return clone;
+        }
 		public static Tuple<Vector, RMatrix> Evd(this RMatrix A)
 		{
 			EigenCalculator eigs = new EigenCalculator(A);
@@ -132,7 +180,7 @@ namespace Orbifold.Numerics
 
 		public static RMatrix Covariance(this RMatrix source, VectorType t = VectorType.Col)
 		{
-			int length = t == VectorType.Row ? source.RowCount : source.ColumnCount;
+			var length = t == VectorType.Row ? source.RowCount : source.ColumnCount;
 			var m = new RMatrix(length);
 			//for (int i = 0; i < length; i++)
 			Parallel.For(0, length, i =>
@@ -158,9 +206,9 @@ namespace Orbifold.Numerics
 		/// <param name="m">A matrix.</param>
 		public static double Sum(this RMatrix m)
 		{
-			double sum = 0;
-			for(int i = 0; i < m.RowCount; i++)
-				for(int j = 0; j < m.ColumnCount; j++)
+			var sum = 0d;
+			for(var i = 0; i < m.RowCount; i++)
+				for(var j = 0; j < m.ColumnCount; j++)
 					sum += m[i, j];
 			return sum;
 		}
@@ -219,7 +267,25 @@ namespace Orbifold.Numerics
 			return n;
 		}
 
-		 
+        /// <summary>
+        /// The standard matrix multiplication. Note that the *-operator in the RMatrix class
+        /// is en entry-by-entry multiplication.
+        /// </summary>
+	    public static RMatrix Times(this RMatrix m1, RMatrix m2)
+	    {
+            if (m1.ColumnCount != m2.RowCount) throw new Exception("The numbers of columns of the" + " first matrix must be equal to the number of " + " rows of the second matrix!");
+            var result = new RMatrix(m1.RowCount, m2.ColumnCount);
+            for (var i = 0; i < m1.RowCount; i++)
+            {
+                for (var j = 0; j < m2.ColumnCount; j++)
+                {
+                    var tmp = result[i, j];
+                    for (var k = 0; k < result.RowCount; k++) tmp += m1[i, k] * m2[k, j];
+                    result[i, j] = tmp;
+                }
+            }
+            return result;	        
+	    }
 	}
 	
 }

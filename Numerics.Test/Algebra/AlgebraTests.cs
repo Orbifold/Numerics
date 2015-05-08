@@ -255,7 +255,7 @@ namespace Orbifold.Numerics.Tests.Algebra
 		public void EigenvaluesTest(int order)
 		{
 			// create random matrix
-			var rand = RMatrix.Rand(order, 1.13);
+			var rand = RMatrix.Random(order, 1.13);
 			// create a symmetric positive definite matrix
 			var A = rand.T * rand;
 			var evd = new EigenCalculator(A);

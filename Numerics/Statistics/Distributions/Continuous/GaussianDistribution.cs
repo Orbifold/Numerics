@@ -2,7 +2,7 @@ using System;
 
 namespace Orbifold.Numerics
 {
-	/// <summary>
+    /// <summary>
 	/// Gaussian or Normal probability distribution.
 	/// </summary>
 	/// <remarks>

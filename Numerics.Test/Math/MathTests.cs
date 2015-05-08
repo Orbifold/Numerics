@@ -494,7 +494,7 @@ namespace Orbifold.Numerics.Tests.Math
 		{
 			var size = 5.PowerOfTwo();
 			var x = new Complex[size];
-			var myRand = new Random();
+            var myRand = new System.Random();
 			for(var i = 0; i < x.Length; i++)
 				x[i] = new Complex(-2 * myRand.NextDouble() + 1, 0);
 			var y = DiscreteFourierTransform.Radix2Forward(x);

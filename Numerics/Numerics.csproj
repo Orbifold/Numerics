@@ -39,6 +39,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Algebra\AlgebraExtensions.cs" />
+    <Compile Include="Algebra\VectorType.cs" />
+    <Compile Include="Analysis\Gamma.cs" />
+    <Compile Include="Statistics\Distributions\Continuous\ChiSquareDistribution.cs" />
+    <Compile Include="Statistics\Distributions\Continuous\ChiSquareTest.cs" />
+    <Compile Include="Statistics\Distributions\Continuous\GammaDistribution.cs" />
+    <Compile Include="Statistics\Stochastic sources\Random.cs" />
     <Compile Include="Conversions\AreaUnit.cs" />
     <Compile Include="Conversions\Converter.cs" />
     <Compile Include="Conversions\DistanceUnit.cs" />

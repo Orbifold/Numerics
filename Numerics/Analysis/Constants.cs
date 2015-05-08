@@ -176,5 +176,37 @@
 		/// See http://en.wikipedia.org/wiki/Electric_Permittivity .
 		/// </summary>
 		public const double ElectricPermittivity = 8.8541878171937079244693661186959426889222899381429e-12;
+
+        /// <summary>
+        ///   Maximum log on the machine.
+        /// </summary>
+        /// 
+        /// <remarks>
+        ///   This constant is defined as 7.09782712893383996732E2.
+        /// </remarks>
+        /// 
+        public const double LogMax = 7.09782712893383996732E2;
+
+        /// <summary>
+        ///   Minimum log on the machine.
+        /// </summary>
+        /// 
+        /// <remarks>
+        ///   This constant is defined as -7.451332191019412076235E2.
+        /// </remarks>
+        /// 
+        public const double LogMin = -7.451332191019412076235E2;
+
+        /// <summary>
+        ///   Double-precision machine round-off error.
+        /// </summary>
+        /// 
+        /// <remarks>
+        ///   This value is actually different from Double.Epsilon. It
+        ///   is defined as 1.11022302462515654042E-16.
+        /// </remarks>
+        /// 
+        public const double DoubleEpsilon = 1.11022302462515654042e-16;
+
 	}
 }

@@ -13,7 +13,7 @@ namespace Orbifold.Numerics.Tests.Functional
 	[TestFixture]
 	public class FunctionalTests
 	{
-		private static Random Rand = new Random(Environment.TickCount);
+        private static System.Random Rand = new System.Random(Environment.TickCount);
 
 		public FunctionalTests()
 		{

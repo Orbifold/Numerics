@@ -10,7 +10,7 @@ namespace Orbifold.Numerics
 	/// </summary>
 	public static class Sequence
 	{
-		static readonly Random Rand = new Random(Environment.TickCount);
+        static readonly System.Random Rand = new System.Random(Environment.TickCount);
         /// <summary>
         /// Calculates the standard deviation on the source collection
         /// </summary>
